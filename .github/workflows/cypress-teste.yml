@@ -5,9 +5,9 @@ on:
     branches:
       - main
     paths:
-      - 'teste/**.js'
-      - 'teste/**.json'
-      - 'teste/**.yml'
+      - '**.js'
+      - '**.json'
+      - '**.yml'
 
 jobs:
   teste-tests:
