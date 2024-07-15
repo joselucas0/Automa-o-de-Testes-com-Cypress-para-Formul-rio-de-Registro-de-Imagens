@@ -1,16 +1,16 @@
-name: Cypress Tests - In Class Project
+name: Cypress Tests - Complete Project
 
 on:
   push:
     branches:
       - main
     paths:
-      - 'in-class-project/**.js'
-      - 'in-class-project/**.json'
-      - 'in-class-project/**.yml'
+      - '**.js'
+      - '**.json'
+      - '**.yml'
 
 jobs:
-  in-class-project-tests:
+  complete-project-tests:
     runs-on: ubuntu-latest
 
     steps:
@@ -20,12 +20,10 @@ jobs:
       - name: Setup Node.js
         uses: actions/setup-node@v4
         with:
-          node-version: 20.12.1
+          node-version: 20
 
       - name: Install dependencies
         run: npm install
-        working-directory: ./in-class-project
 
       - name: Run Cypress tests
-        run: npm run cypress:headless
-        working-directory: ./in-class-project
+        run: npx cypress run
