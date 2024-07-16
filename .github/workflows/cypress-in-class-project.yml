@@ -24,6 +24,8 @@ jobs:
 
       - name: Install dependencies
         run: npm install
+        working-directory: ./teste
 
       - name: Run Cypress tests
         run: npx cypress run
+        working-directory: ./teste
