@@ -14,18 +14,17 @@ jobs:
 
     steps:
       - name: Checkout code
-        uses: actions/checkout@v3
+        uses: actions/checkout@v4
 
       - name: Set up Node.js
-        uses: actions/setup-node@v3
+        uses: actions/setup-node@v4
         with:
           node-version: '20.12.1'
 
       - name: Install dependencies
-        run: cd teste && npm install
-
-      - name: Fix Cypress permissions
-        run: cd teste && chmod -R 755 node_modules/.bin
+        run: npm install
+        working-directory: ./teste
 
       - name: Run Cypress tests
-        run: cd teste && npx cypress run
+        run: npm run cypress:headless
+        working-directory: ./teste
