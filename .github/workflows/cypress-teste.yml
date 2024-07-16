@@ -25,6 +25,9 @@ jobs:
         run: npm install
         working-directory: ./teste
 
+      - name: Fix Cypress permissions
+        run: chmod -R 755 ./teste/node_modules/.bin
+
       - name: Run Cypress tests
         run: npm run cypress:headless
         working-directory: ./teste
