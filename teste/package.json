@@ -12,7 +12,7 @@
     "cypress:headless": "npx cypress run --browser electron"
   },
   "keywords": [],
-  "author": "",
+  "author": "joselucas0",
   "license": "ISC",
   "devDependencies": {
     "cypress": "^13.7.2",
