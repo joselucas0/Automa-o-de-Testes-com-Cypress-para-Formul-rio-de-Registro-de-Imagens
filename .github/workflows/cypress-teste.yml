@@ -13,19 +13,19 @@ jobs:
     runs-on: ubuntu-latest
 
     steps:
-    - name: Checkout code
-      uses: actions/checkout@v3
+      - name: Checkout code
+        uses: actions/checkout@v3
 
-    - name: Set up Node.js
-      uses: actions/setup-node@v3
-      with:
-        node-version: '20.12.1'
+      - name: Set up Node.js
+        uses: actions/setup-node@v3
+        with:
+          node-version: '20.12.1'
 
-   - name: Install dependencies
-      run: cd teste && npm install
+      - name: Install dependencies
+        run: cd teste && npm install
 
-    - name: Fix Cypress permissions
-      run: cd teste && chmod -R 755 node_modules/.bin
+      - name: Fix Cypress permissions
+        run: cd teste && chmod -R 755 node_modules/.bin
 
-    - name: Run Cypress tests
-      run: cd teste && npx cypress run
+      - name: Run Cypress tests
+        run: cd teste && npx cypress run
