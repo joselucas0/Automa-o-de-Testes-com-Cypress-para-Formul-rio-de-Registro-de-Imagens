@@ -1,13 +1,13 @@
-name: Cypress Tests - teste
+name: Cypress Tests - Complete Project
 
 on:
   push:
     branches:
       - main
     paths:
-      - '**.js'
-      - '**.json'
-      - '**.yml'
+      - 'teste/**.js'
+      - 'teste/**.json'
+      - 'teste/**.yml'
 
 jobs:
   teste-tests:
