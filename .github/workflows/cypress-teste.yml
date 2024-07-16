@@ -29,7 +29,7 @@ jobs:
         run: chmod -R 755 ./teste/node_modules/.bin
 
       - name: Install cypress
-        run: .\node_modules\.bin\cypress.cmd install --force
+        run: npm install cypress
         working-directory: ./teste
 
       - name: Run Cypress tests
