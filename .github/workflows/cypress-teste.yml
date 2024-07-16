@@ -24,9 +24,6 @@ jobs:
       - name: Install dependencies
         run: cd teste && npm install
 
-      - name: Install Cypress
-        run: cd teste && npx cypress install
-
       - name: Fix Cypress permissions
         run: cd teste && chmod -R 755 node_modules/.bin
 
